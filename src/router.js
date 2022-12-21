@@ -1,6 +1,7 @@
 import {createRouter, createWebHistory} from 'vue-router';
 import HomePage from "./views/HomePage.vue";
 import AboutPage from "./views/AboutPage.vue";
+import SettingPage from "./views/SettingPage.vue";
 
 // 路由
 const routes = [
@@ -15,6 +16,10 @@ const routes = [
     {
         path: '/about',
         component: AboutPage
+    },
+    {
+        path: '/setting',
+        component: SettingPage
     }
 ]
 

@@ -1,32 +1,36 @@
 const { app, BrowserWindow, Menu } = require('electron');
 const path = require('path');      // path模块
+const windowCtl = require('./controller/windowCtl');
 
 // 创建一个窗口
 const createWindow = () => {
-    const win = new BrowserWindow({
+    const mainWindow  = new BrowserWindow({
         // 自定义窗口状态
-        width: 800,
-        height:600,
-        minWidth: 800,
-        minHeight: 600,
-        maxWidth: 800,
-        maxHeight: 600,
+        width: 840,
+        height: 630,
+        minWidth: 840,
+        minHeight: 630,
+        maxWidth: 840,
+        maxHeight: 630,
         webPreferences: {
             // 预加载js
-            preload: path.resolve(__dirname, './preload/index.js')
+            preload: path.join(__dirname, './preload/index.js')
         },
+        frame: false,   // 删除默认的标题栏
         show: false,    // 暂时不显示，等待加载完毕
     });
 
-    win.loadURL('http://127.0.0.1:5173/');
+    mainWindow.loadURL('http://127.0.0.1:5173/');
 
+    // 添加窗口控制
+    windowCtl(mainWindow);
     // 等待加载完毕再显示窗口 
-    win.on('ready-to-show',()=>{
-        win.show();
+    mainWindow.on('ready-to-show',()=>{
+        mainWindow.show();
     })
 
     // 打开调试工具
-    win.webContents.openDevTools();
+    mainWindow.webContents.openDevTools();
 };
 
 // 禁用菜单，一般情况下，不需要禁用
