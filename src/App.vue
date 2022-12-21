@@ -26,6 +26,7 @@ const routers = [
 // 点击关闭窗口
 const handleCloseWindow = () => {
   console.log("close window");
+  window.electronAPI.callWindowCtl("close");
 };
 </script>
 
@@ -114,6 +115,7 @@ const handleCloseWindow = () => {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      transition: all 0.2s;
 
       .link-icon {
         width: 28px;
@@ -149,6 +151,15 @@ const handleCloseWindow = () => {
       height: 3px;
       background-color: #007acc;
       border-radius: 2px;
+      animation: indicator 0.2s;
+      @keyframes indicator {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 20px;
+        }
+      }
     }
   }
 }

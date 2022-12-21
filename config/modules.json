@@ -1,0 +1,57 @@
+[
+    {
+        "mod_id": "screenshot",
+        "mod_name": "截图",
+        "mod_version": "1.0.0",
+        "mod_icon": "src/assets/images/modules/screenshot.png",
+        "mod_function": "handleScreenShot"
+    },
+    {
+        "mod_id": "screenshot",
+        "mod_name": "截图",
+        "mod_version": "1.0.0",
+        "mod_icon": "src/assets/images/modules/screenshot.png",
+        "mod_function": "handleScreenShot"
+    },
+    {
+        "mod_id": "screenshot",
+        "mod_name": "截图",
+        "mod_version": "1.0.0",
+        "mod_icon": "src/assets/images/modules/screenshot.png",
+        "mod_function": "handleScreenShot"
+    },
+    {
+        "mod_id": "screenshot",
+        "mod_name": "截图",
+        "mod_version": "1.0.0",
+        "mod_icon": "src/assets/images/modules/screenshot.png",
+        "mod_function": "handleScreenShot"
+    },{
+        "mod_id": "screenshot",
+        "mod_name": "截图",
+        "mod_version": "1.0.0",
+        "mod_icon": "src/assets/images/modules/screenshot.png",
+        "mod_function": "handleScreenShot"
+    },
+    {
+        "mod_id": "screenshot",
+        "mod_name": "截图",
+        "mod_version": "1.0.0",
+        "mod_icon": "src/assets/images/modules/screenshot.png",
+        "mod_function": "handleScreenShot"
+    },
+    {
+        "mod_id": "screenshot",
+        "mod_name": "截图",
+        "mod_version": "1.0.0",
+        "mod_icon": "src/assets/images/modules/screenshot.png",
+        "mod_function": "handleScreenShot"
+    },
+    {
+        "mod_id": "screenshot",
+        "mod_name": "截图",
+        "mod_version": "1.0.0",
+        "mod_icon": "src/assets/images/modules/screenshot.png",
+        "mod_function": "handleScreenShot"
+    }
+]

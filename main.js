@@ -1,6 +1,7 @@
 const { app, BrowserWindow, Menu } = require('electron');
 const path = require('path');      // path模块
 const windowCtl = require('./controller/windowCtl');
+const modulesCtl = require('./controller/modulesCtl');
 
 // 创建一个窗口
 const createWindow = () => {
@@ -22,9 +23,11 @@ const createWindow = () => {
 
     mainWindow.loadURL('http://127.0.0.1:5173/');
 
-    // 添加窗口控制
-    windowCtl(mainWindow);
-    // 等待加载完毕再显示窗口 
+    // 添加控制器
+    windowCtl(mainWindow);      // 主窗口控制
+    modulesCtl();               // 模块控制
+    
+    // 等待加载完毕再显示窗口  
     mainWindow.on('ready-to-show',()=>{
         mainWindow.show();
     })
@@ -35,6 +38,8 @@ const createWindow = () => {
 
 // 禁用菜单，一般情况下，不需要禁用
 Menu.setApplicationMenu(null);
+// 禁用当前应用程序的硬件加速
+app.disableHardwareAcceleration();
 
 app.whenReady().then(() => {
     // 创建
