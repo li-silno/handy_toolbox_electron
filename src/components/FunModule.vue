@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-import { toRefs, defineProps } from "vue";
+import { toRefs } from "vue";
 // 使用父组件传递过来的值
 const props = defineProps({
   mod_id: String,
@@ -36,6 +36,7 @@ const handleModuleClick = () => {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s;
   .icon {
     width: 60px;
     height: 60px;
@@ -48,6 +49,10 @@ const handleModuleClick = () => {
     font-size: @promptFontSize;
     color: @prompt-text-font;
     margin-top: 4px;
+  }
+  &:hover {
+    background-color: antiquewhite;
+    cursor: pointer;
   }
 }
 </style>

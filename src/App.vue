@@ -3,7 +3,7 @@ import path from "path";
 import { ref, shallowRef } from "vue";
 
 // LOGO
-const appImgUrl = "Handy Toolbox.png";
+const appImgUrl = "logo-window.png";
 // 路由
 const routers = [
   {
@@ -97,6 +97,7 @@ const handleCloseWindow = () => {
   .footer-area {
     width: @leftRouterWidth;
     height: $width;
+    cursor: pointer;
   }
 
   .router-link {
